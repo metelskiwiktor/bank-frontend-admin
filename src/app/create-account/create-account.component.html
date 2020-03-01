@@ -1,0 +1,30 @@
+<form>
+  Oddział:
+  <input type="text" [(ngModel)]="account.branchName" [ngModelOptions]="{standalone: true}">
+  Login:
+  <input type="text" [(ngModel)]="account.userDTO.login" [ngModelOptions]="{standalone: true}">
+  Hasło:
+  <input type="password" [(ngModel)]="account.userDTO.password" [ngModelOptions]="{standalone: true}">
+  Płeć:
+  <select [(ngModel)]="account.userDTO.gender" [ngModelOptions]="{standalone: true}">
+    <option value="MALE">Mężczyzna</option>
+    <option value="FEMALE">Kobieta</option>
+  </select>
+  Imie:
+  <input type="text" [(ngModel)]="account.userDTO.firstName" [ngModelOptions]="{standalone: true}">
+  Nazwisko:
+  <input type="text" [(ngModel)]="account.userDTO.lastName" [ngModelOptions]="{standalone: true}">
+  Pesel:
+  <input type="text" [(ngModel)]="account.userDTO.pesel" [ngModelOptions]="{standalone: true}">
+  Imie ojca:
+  <input type="text" [(ngModel)]="account.userDTO.idCardDTO.fatherFirstName" [ngModelOptions]="{standalone: true}">
+  Imie matki:
+  <input type="text" [(ngModel)]="account.userDTO.idCardDTO.motherFirstName" [ngModelOptions]="{standalone: true}">
+  Numer:
+  <input type="text" [(ngModel)]="account.userDTO.idCardDTO.number" [ngModelOptions]="{standalone: true}">
+  Data ważności:
+  <input type="text" [(ngModel)]="account.userDTO.idCardDTO.expiryDate" [ngModelOptions]="{standalone: true}">
+  Data urodzenia:
+  <input type="text" [(ngModel)]="account.userDTO.idCardDTO.birthDate" [ngModelOptions]="{standalone: true}">
+  <button (click)="createAccount()">Załóż konto</button>
+</form>

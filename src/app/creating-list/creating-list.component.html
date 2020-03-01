@@ -1,0 +1,23 @@
+<table border="1">
+  <thead></thead>
+  <tr>
+    <th>Użytkownicy</th>
+    <th>Numer konta</th>
+    <th>Saldo</th>
+    <th>Status konta</th>
+    <th>Karta płatnicza</th>
+    <th>Akcja</th>
+  </tr>
+
+  <tbody>
+    <tr *ngFor="let account of accounts">
+<!--      <td>null</td>-->
+      <td>{{account.users.forEach(detailsUser)}}</td>
+      <td>{{account.accountNumber}}</td>
+      <td>{{account.balance}}</td>
+      <td>{{account.accountStatus}}</td>
+      <td>{{account.creditCard}}</td>
+      <td><button (click)="makeValid(account.accountNumber)">Akceptuj</button></td>
+    </tr>
+  </tbody>
+</table>
